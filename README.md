@@ -1,5 +1,5 @@
-Retail Sales Analysis
-Project Overview
+# Retail Sales Analysis
+## Project Overview
 
 **Project Title**: Retail Sales Analysis  
 
