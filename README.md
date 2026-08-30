@@ -1,3 +1,6 @@
+Retail Sales Analysis
+Project Overview
+
 **Project Title**: Retail Sales Analysis  
 
 ## Objectives
