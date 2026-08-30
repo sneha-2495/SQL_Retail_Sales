@@ -5,7 +5,10 @@
 
 ## Business Objectives
 
-**Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
+**Set up a retail sales database**
+
+Create and populate a retail sales database with the provided sales data.
+
 **Data Cleaning**
    - Missing value identification
    - NULL handling
