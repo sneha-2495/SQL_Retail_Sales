@@ -32,7 +32,7 @@ create table retail_sales_stg
 			cogs varchar(25),
 			total_sale varchar(25)
 		);
-
+-- **A staging table was created to initially load raw CSV values as text, allowing missing/blank values to be standardized before converting columns to their appropriate analytical data types.**
 create table retail_sales AS
 select 
 	transactions_id,
