@@ -126,7 +126,7 @@ where total_sale > 1000;
 Select 
 	Category, 
 	Gender, 
-	sum(transactions_id) as Total_Transactions 
+	Count(transactions_id) as Total_Transactions 
 from retail_sales 
 group by category, gender
 order by Category;
