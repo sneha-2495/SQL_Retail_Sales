@@ -3,12 +3,42 @@
 
 **Project Title**: Retail Sales Analysis  
 
-## Objectives
+## Business Objectives
 
-1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
-2. **Data Cleaning**: Identify and remove any records with missing or null values.
-3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
-4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
+**Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
+**Data Cleaning**
+   - Missing value identification
+   - NULL handling
+   - Data type conversion
+**Exploratory Data Analysis (EDA)**
+  - Transaction volume
+  - Customer count
+  - Product categories
+  - Sales distribution
+**Business Analysis**
+    1. Sales on a specific date
+    2. Clothing purchases in November 2022
+	3. Sales by category
+	4. Average customer age by category
+	5. High-value transactions
+	6. Transactions by gender and category
+	7. Best-performing month by year
+	8. Top 5 customers
+	9. Unique customers by category
+	10. Sales by time-of-day shift
+
+## SQL Skills Demonstrated
+- SELECT
+- WHERE
+- GROUP BY
+- ORDER BY
+- CASE
+- CTE
+- Aggregate Functions
+- Window Functions
+- NULLIF
+- ALTER TABLE
+- Date Functions
 
 ## Project Structure
 
@@ -59,6 +89,7 @@ Modify column price_per_unit FLOAT,
 Modify column cogs FLOAT,
 Modify column total_sale FLOAT;
 
+-- The **quantity** column was initially created as **quantiy** and was later renamed and corrected to **quantity**.
 Alter table retail_sales
 Change column quantiy quantity INT;
 ```
@@ -161,7 +192,10 @@ from
 	year(sale_date) as Year,
 	month(sale_date) as Month,
 	round(avg(total_sale),2) as Avg_sales,
-	rank() Over(Partition By year(sale_date) Order By avg(total_sale) Desc) as ranking
+	rank() Over(
+				Partition By year(sale_date)
+				Order By avg(total_sale) Desc
+	) as ranking
 	from retail_sales
 	Group by Year, Month
 ) as t1
