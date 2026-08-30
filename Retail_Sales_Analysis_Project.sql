@@ -139,10 +139,13 @@ Select
 from
 (
 	Select 
-	year(sale_date) as Year,		 -- can use Extract(Year from sale_date) as year
-	month(sale_date) as Month,		 -- can use Extract(Month from sale_date) as month
+	year(sale_date) as Year,
+	month(sale_date) as Month,
 	round(avg(total_sale),2) as Avg_sales,
-	rank() Over(Partition By year(sale_date) Order By avg(total_sale) Desc) as ranking
+	rank() Over(
+				Partition By year(sale_date)
+				Order By avg(total_sale) Desc
+	) as ranking
 	from retail_sales
 	Group by Year, Month
 ) as t1
