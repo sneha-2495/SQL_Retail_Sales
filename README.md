@@ -10,11 +10,13 @@
    - Missing value identification
    - NULL handling
    - Data type conversion
+
 **Exploratory Data Analysis (EDA)**
   - Transaction volume
   - Customer count
   - Product categories
   - Sales distribution
+
 **Business Analysis**
     1. Sales on a specific date
     2. Clothing purchases in November 2022
