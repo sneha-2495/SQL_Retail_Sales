@@ -143,7 +143,7 @@ where total_sale > 1000;
 Select 
 	Category, 
 	Gender, 
-	sum(transactions_id) as Total_Transactions 
+	Count(transactions_id) as Total_Transactions 
 from retail_sales 
 group by category, gender
 order by Category;
@@ -222,4 +222,4 @@ Group By shift;
 - **Customer Insights**: Reports on top customers and unique customer counts per category.
 
 
-Thank you for your support, and I look forward to connecting with you!
+Thanks, looking forward to connect with you.
